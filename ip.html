@@ -1,0 +1,44 @@
+
+<script>
+  window.oncontextmenu = function () { return false; }
+  window.onkeydown = window.onkeyup = window.onkeypress = function () {
+    window.event.returnValue = false;
+    return false;
+  }
+  var h = window.innerHeight, w = window.innerWidth;
+  window.onresize = function () {
+    if (h != window.innerHeight || w != window.innerWidth) {
+      window.close();
+      window.location = "about:blank";
+    }
+  }
+</script>
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+
+<!--get ip addr-->
+<script type="text/javascript">
+  window.onload = function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://api.ipify.org?format=jsonp&callback=DisplayIP";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  };
+  function DisplayIP(response) {
+    document.getElementById("ipaddress").innerHTML = response.ip;
+  }
+</script>
+</body>
+<footer>
+  <div class="div_foot",id="ipaddress">
+    <span id="ipaddress"></span>
+  </div>
+</footer>
+
+</html>

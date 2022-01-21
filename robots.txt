@@ -1,0 +1,12 @@
+# robotstxt.org/
+
+User-agent: *
+Disallow: /404.html
+Disallow: /ip.html
+Disallow: /img
+Disallow: /mp3
+Disallow: /font
+Disallow: /css
+Disallow: /js
+Disallow: .htaccess
+Disallow: .gitgnore

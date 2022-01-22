@@ -25,6 +25,6 @@
                 }
             }
             function stop() {
-                test.style.color = "red";
+                test.style.color = "green";
                 clearInterval(blinkCircle);
             }

@@ -92,9 +92,13 @@
                 audioElement.pause();
             }
         }
+		audio.oncanplay = function(){
+            audio.play();
+        }
+        audio.load();
     </script>
         <script type="text/javascript" src="./js/18D676.js"></script>
-        <audio autoplay="true" id="audioElement" loop="true" src="./bgm/7cabb4.ogg"></audio>
+        <audio autoplay="false" id="audioElement" loop="false" src="./bgm/7cabb4.ogg"></audio>
     </body>
 
 </html>
